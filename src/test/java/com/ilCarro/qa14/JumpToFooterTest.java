@@ -9,7 +9,7 @@ public class JumpToFooterTest extends com.ilCarro.qa14.TestBase {
     @Test
     public void jumpToFooter(){
         jumpToFooter();
-        Assert.assertTrue(isElementPresent(By.cssSelector("[class='footer__red_text'] ")));
+        isFutterBunnerPresent();
     }
 
 }

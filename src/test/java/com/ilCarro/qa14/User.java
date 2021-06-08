@@ -1,27 +1,27 @@
 package com.ilCarro.qa14;
 
 public class User {
-    private  String firstName;
-    private  String secondName;
-    private  String email;
-    private  String password;
+    private String firstName;
+    private String secondName;
+    private String email;
+    private String password;
 
-    public User setFirstName(String firstName) {
+    public User withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public User setSecondName(String secondName) {
+    public User withSecondName(String secondName) {
         this.secondName = secondName;
         return this;
     }
 
-    public User setEmail(String email) {
+    public User withEmail(String email) {
         this.email = email;
         return this;
     }
 
-    public User setPassword(String password) {
+    public User withPassword(String password) {
         this.password = password;
         return this;
     }
@@ -42,4 +42,3 @@ public class User {
         return password;
     }
 }
-
