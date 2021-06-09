@@ -1,4 +1,4 @@
-package com.ilCarro.qa14;
+package models;
 
 public class Car {
     private  String country;

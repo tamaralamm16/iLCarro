@@ -1,5 +1,6 @@
-package com.ilCarro.qa14;
+package tests;
 
+import models.User;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -7,34 +8,34 @@ public class LoginTests extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        if (!isSignUpButtonPresent()) {
-            logout();
+        if (!app.user().isSignUpButtonPresent()) {
+            app.user().logout();
         }
     }
 
     @Test
     public void loginRegisteredUserPositiveTest() {
 
-        clickOnLoginTab();
+        app.user().clickOnLoginTab();
 
-        fillLoginForm(new User().withEmail("nummels@gmail.com")
+        app.user().fillLoginForm(new User().withEmail("nummels@gmail.com")
                 .withPassword("Nummels098765"));
 
-        submit();
+        app.user().submit();
 
-        isLogoutTabPresent();
+        app.header().isLogoutTabPresent();
 
     }
 
     @Test
     public void loginRegisteredUserWithWrongPasswordNegativeTest() {
 
-        clickOnLoginTab();
+        app.user().clickOnLoginTab();
 
-        fillLoginForm(new User().withEmail("nummels@gmail.com")
+        app.user().fillLoginForm(new User().withEmail("nummels@gmail.com")
                 .withPassword("hummel098765"));
 
-        submit();
+        app.user().submit();
 
     }
 
