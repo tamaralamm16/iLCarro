@@ -1,4 +1,4 @@
-package tests;
+package com.ilCarro.qa14.tests;
 
 import org.testng.annotations.Test;
 
@@ -6,7 +6,7 @@ public class JumpToFooterTest extends TestBase {
     @Test
     public void jumpToFooter(){
         jumpToFooter();
-        app.footer.isFutterBunnerPresent();
+        app.footer().isFutterBunnerPresent();
     }
 
 }

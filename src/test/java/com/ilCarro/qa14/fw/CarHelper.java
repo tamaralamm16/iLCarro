@@ -1,6 +1,6 @@
-package fw;
+package com.ilCarro.qa14.fw;
 
-import models.Car;
+import com.ilCarro.qa14.models.Car;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

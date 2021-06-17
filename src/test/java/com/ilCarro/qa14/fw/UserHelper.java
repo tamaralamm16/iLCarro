@@ -1,7 +1,6 @@
-package fw;
+package com.ilCarro.qa14.fw;
 
-import fw.HelperBase;
-import models.User;
+import com.ilCarro.qa14.models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -51,6 +50,9 @@ public class UserHelper extends HelperBase {
 
     public void isLogInFormPresent() {
         Assert.assertTrue(isElementPresent(By.cssSelector(".Login_login__right_block__1niYm")));
+    }
+    public boolean isLoginFormPresent() {
+        return isElementPresent(By.cssSelector(".Login_login__right_block__1niYm"));
     }
 
     public void clickCheckPolicy() {

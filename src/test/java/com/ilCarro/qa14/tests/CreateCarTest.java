@@ -1,6 +1,6 @@
-package tests;
+package com.ilCarro.qa14.tests;
 
-import models.Car;
+import com.ilCarro.qa14.models.Car;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -8,17 +8,17 @@ public class CreateCarTest extends TestBase {
 
     @BeforeMethod
     public void ensurePreconditions() {
-        if (!app.user.isUserLoggedIn()){
-            app.user.logIn();
+        if (!app.user().isUserLoggedIn()){
+            app.user().logIn();
         }
     }
 
     @Test
     public void addCarTest() throws InterruptedException {
-        app.user.pause();
-        app.car.clickOnAddCarTab();
+        app.user().pause();
+        app.car().clickOnAddCarTab();
 
-        app.car.fillCarForm(new Car()
+        app.car().fillCarForm(new Car()
                 .setCountry("Germany")
                 .setAddress("Friedrichstrasse")
                 .setDistance("1000"));

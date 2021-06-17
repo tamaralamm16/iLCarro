@@ -1,6 +1,6 @@
-package tests;
+package com.ilCarro.qa14.tests;
 
-import models.User;
+import com.ilCarro.qa14.models.User;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -36,6 +36,7 @@ public class LoginTests extends TestBase {
                 .withPassword("hummel098765"));
 
         app.user().submit();
+        app.header().isLogoutTabPresent();
 
     }
 

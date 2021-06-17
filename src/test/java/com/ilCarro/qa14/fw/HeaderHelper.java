@@ -1,6 +1,5 @@
-package fw;
+package com.ilCarro.qa14.fw;
 
-import fw.HelperBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
