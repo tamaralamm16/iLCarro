@@ -1,5 +1,6 @@
 package com.ilCarro.qa14.tests;
 
+import com.ilCarro.qa14.fw.ApplicationManager;
 import org.openqa.selenium.remote.BrowserType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +9,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import com.ilCarro.qa14.fw.ApplicationManager;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -17,6 +17,7 @@ public class TestBase {
 
     protected static ApplicationManager app = new ApplicationManager(System
             .getProperty("browser", BrowserType.CHROME));
+
     Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeSuite
@@ -25,24 +26,21 @@ public class TestBase {
     }
 
     @BeforeMethod
-    public void startTest(Method m, Object[] p){
-        logger.info("Start test " + m.getName() + "with data: " + Arrays.asList(p));
-
+    public void  startTest(Method m, Object[] p) {
+        logger.info("Start test " + m.getName() + " with data: " + Arrays.asList(p));
     }
 
     @AfterMethod(alwaysRun = true)
-    public void stopTest(ITestResult result){
-        if(result.isSuccess()){
-            logger.info(("PASSED: test method " + result.getMethod().getMethodName()));
+    public void stopTest(ITestResult result) {
+        if (result.isSuccess()){
+            logger.info("PASSED: test method " + result.getMethod().getMethodName());
         } else {
-            logger.error("FAILED: Test method " + result.getMethod().getMethodName());
-            logger.info("Screenshot: " + app.user().takeScreenshot());
+            logger.error("FAILED: Test method " + result.getMethod().getMethodName() + "\n" +
+                    "Screenshot: " + app.user().takeScreenshot());
         }
-        logger.info("Stop test ");
-        logger.info("===================");
+
+        logger.info("====================================");
     }
-
-
 
     @AfterSuite(enabled = true)
     public void tearDown() {
@@ -50,4 +48,3 @@ public class TestBase {
     }
 
 }
-

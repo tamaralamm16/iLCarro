@@ -1,0 +1,4 @@
+09:24:31.597 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start test loginRegisteredUserPositiveTestwith data: []
+09:24:34.459 [main] INFO  com.ilCarro.qa14.tests.TestBase - PASSED: test method loginRegisteredUserPositiveTest
+09:24:34.460 [main] INFO  com.ilCarro.qa14.tests.TestBase - Stop test 
+09:24:34.460 [main] INFO  com.ilCarro.qa14.tests.TestBase - ===================

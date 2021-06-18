@@ -12,7 +12,6 @@ import java.util.List;
 
 public class CreateAccountTest extends TestBase {
 
-
     @BeforeMethod
     public void ensurePrecondition() {
         if (!app.user().isSignUpButtonPresent()) {
@@ -26,18 +25,18 @@ public class CreateAccountTest extends TestBase {
         app.user().isSignUpFormPresent();
 
         app.user().fillRegistrationForm(new User()
-                .withFirstName("Nils")
-                .withSecondName("Nummels")
-                .withEmail("nummels" + System.currentTimeMillis() + "@gmail.com")
-                .withPassword("Nummels098765"));
+                .withFirstName("Mats")
+                .withSecondName("Bummels")
+                .withEmail("Bummels" + System.currentTimeMillis() + "@gmail.com")
+                .withPassword("Bummels098765"));
 
         app.user().clickCheckPolicy();
         app.user().submit();
         app.user().isLogInFormPresent();
 
     }
-    @Test(enabled = false,dataProvider ="validUser", dataProviderClass = DataProviders.class)
 
+    @Test(enabled = false,dataProvider = "validUser", dataProviderClass = DataProviders.class)
     public void signUpFromDataProviderTest(String fName, String sName, String email, String password) {
         app.header().clickOnSignUpTab();
         app.user().isSignUpFormPresent();
@@ -50,28 +49,25 @@ public class CreateAccountTest extends TestBase {
 
         app.user().clickCheckPolicy();
         app.user().submit();
-        logger.info("Login form present. Actual result:" + String.valueOf(app.user().isLoginFormPresent() + "." +
-                "Expected result: true. "));
+        logger.info("Login form present. Actual result: " + app.user().isLoginFormPresent()
+                + ". Expected result: true.");
         app.user().isLogInFormPresent();
 
 
     }
-@Test(enabled = false,dataProvider ="validUserFromCSV" )
 
+    @Test(enabled = false,dataProvider = "validUserFromCSV", dataProviderClass = DataProviders.class)
     public void signUpFromDataProviderFromCSVTest(User user) {
         app.header().clickOnSignUpTab();
         app.user().isSignUpFormPresent();
 
         app.user().fillRegistrationForm(user);
 
-
         app.user().clickCheckPolicy();
         app.user().submit();
-        logger.info("Login form present. Actual result:" + String.valueOf(app.user().isLoginFormPresent() + "." +
-                "Expected result: true. "));
+        logger.info("Login form present. Actual result: " + app.user().isLoginFormPresent()
+                + ". Expected result: true.");
         app.user().isLogInFormPresent();
-
-
     }
 
 }

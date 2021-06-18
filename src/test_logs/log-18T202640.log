@@ -1,0 +1,24 @@
+20:27:30.418 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start test loginRegisteredUserPositiveTest with data: []
+20:27:30.464 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.cssSelector: [href='/signup']
+20:27:30.543 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.cssSelector: [href='/signup']found. 
+20:27:30.580 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.xpath: //ul[@class='header__nav desktop']/li[5]
+20:27:30.742 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.xpath: //ul[@class='header__nav desktop']/li[5]found. 
+20:27:30.955 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.cssSelector: [name='email']
+20:27:30.998 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.cssSelector: [name='email']found. 
+20:27:31.143 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.cssSelector: [name='email']
+20:27:31.176 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.cssSelector: [name='email']found. 
+20:27:31.269 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.cssSelector: [name='email']
+20:27:31.320 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.cssSelector: [name='email']found. 
+20:27:31.674 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.name: password
+20:27:31.714 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.name: passwordfound. 
+20:27:31.863 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.name: password
+20:27:31.904 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.name: passwordfound. 
+20:27:31.960 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.name: password
+20:27:31.984 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.name: passwordfound. 
+20:27:32.251 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.cssSelector: [type='submit']
+20:27:32.284 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.cssSelector: [type='submit']found. 
+20:27:32.430 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start search By.xpath: //a[contains(.,'logOut')]
+20:27:42.462 [main] INFO  com.ilCarro.qa14.tests.TestBase - By.xpath: //a[contains(.,'logOut')]found. 
+20:27:44.722 [main] ERROR com.ilCarro.qa14.tests.TestBase - FAILED: Test method loginRegisteredUserPositiveTest
+Screenshot: C:\Users\Dediko\GitHub\iLCarro\screenshot\screen1624040863810.png
+20:27:44.725 [main] INFO  com.ilCarro.qa14.tests.TestBase - ====================================

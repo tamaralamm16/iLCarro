@@ -14,17 +14,28 @@ public class LoginTests extends TestBase {
     }
 
     @Test
-    public void loginRegisteredUserPositiveTest() {
+    public void loginRegisteredUserPositiveTest() throws InterruptedException {
 
         app.user().clickOnLoginTab();
 
-        app.user().fillLoginForm(new User().withEmail("nummels@gmail.com")
-                .withPassword("Nummels098765"));
+        app.user().fillLoginForm(new User().withEmail("Bummels@gmail.com")
+                .withPassword("Bummels098765"));
 
         app.user().submit();
 
         app.header().isLogoutTabPresent();
+    }
 
+    @Test(enabled = false,dataProvider = "loginPositiveTestFromCSV", dataProviderClass = DataProviders.class)
+    public void loginRegisteredUserPositiveFromCSVTest(User user) throws InterruptedException {
+
+        app.user().clickOnLoginTab();
+
+        app.user().fillLoginForm(user);
+
+        app.user().submit();
+
+        app.header().isLogoutTabPresent();
     }
 
     @Test
@@ -32,11 +43,24 @@ public class LoginTests extends TestBase {
 
         app.user().clickOnLoginTab();
 
-        app.user().fillLoginForm(new User().withEmail("nummels@gmail.com")
-                .withPassword("hummel098765"));
+        app.user().fillLoginForm(new User().withEmail("hummels@gmail.com")
+                .withPassword("hummels098765"));
 
         app.user().submit();
-        app.header().isLogoutTabPresent();
+        app.user().isLogInFormPresent();
+
+    }
+
+    @Test(enabled = false,dataProvider = "loginNegativeTestFromCSV", dataProviderClass = DataProviders.class)
+    public void loginRegisteredUserWithWrongPasswordNegativeFromCSVTest(User user) {
+
+        app.user().clickOnLoginTab();
+
+        app.user().fillLoginForm(user);
+
+        app.user().submit();
+
+        app.user().isLogInFormPresent();
 
     }
 

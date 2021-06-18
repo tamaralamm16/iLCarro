@@ -1,0 +1,4 @@
+22:32:10.599 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start test loginRegisteredUserWithWrongPasswordNegativeTestwith data: []
+22:32:22.471 [main] ERROR com.ilCarro.qa14.tests.TestBase - FAILED: Test method loginRegisteredUserWithWrongPasswordNegativeTest
+22:32:22.471 [main] INFO  com.ilCarro.qa14.tests.TestBase - Stop test 
+22:32:22.471 [main] INFO  com.ilCarro.qa14.tests.TestBase - ===================

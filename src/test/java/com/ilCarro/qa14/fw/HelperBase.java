@@ -1,16 +1,14 @@
 package com.ilCarro.qa14.fw;
 
 import com.google.common.io.Files;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.NoSuchElementException;
 
 public class HelperBase {
+
     WebDriver wd;
 
     public HelperBase(WebDriver wd) {
@@ -36,6 +34,8 @@ public class HelperBase {
             click(locator);
             wd.findElement(locator).clear();
             wd.findElement(locator).sendKeys(text);
+//            wd.findElement(locator).sendKeys(Keys
+//                    .chord(Keys.CONTROL,"a") + Keys.DELETE + text);
         }
     }
 
@@ -43,20 +43,24 @@ public class HelperBase {
         wd.findElement(locator).click();
     }
 
-    public void pause() throws InterruptedException {
+    public void pause(int millis) throws InterruptedException {
+        Thread.sleep(millis);
+    }
 
-        Thread.sleep(2000);
+
+    public void jumpToFooter() {
+        wd.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END);
     }
 
     public String takeScreenshot() {
         File tmp = ((TakesScreenshot) wd).getScreenshotAs(OutputType.FILE);
-        File screenshot = new File("src/screenshot" + System.currentTimeMillis() + ".png");
+        File screenshot = new File("screenshot/screen" + System.currentTimeMillis() + ".png");
         try {
             Files.copy(tmp, screenshot);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
         return screenshot.getAbsolutePath();
     }
+
 }

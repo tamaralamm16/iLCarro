@@ -1,0 +1,9 @@
+20:19:08.043 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start test signUpFromDataProviderTest
+20:19:20.228 [main] INFO  com.ilCarro.qa14.tests.TestBase - Stop test signUpFromDataProviderTest
+20:19:20.228 [main] INFO  com.ilCarro.qa14.tests.TestBase - ===================
+20:19:20.233 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start test signUpFromDataProviderTest
+20:19:32.101 [main] INFO  com.ilCarro.qa14.tests.TestBase - Stop test signUpFromDataProviderTest
+20:19:32.101 [main] INFO  com.ilCarro.qa14.tests.TestBase - ===================
+20:19:32.107 [main] INFO  com.ilCarro.qa14.tests.TestBase - Start test signUpTest
+20:19:33.460 [main] INFO  com.ilCarro.qa14.tests.TestBase - Stop test signUpTest
+20:19:33.460 [main] INFO  com.ilCarro.qa14.tests.TestBase - ===================

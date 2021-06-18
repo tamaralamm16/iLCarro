@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class UserHelper extends HelperBase {
-    WebDriver wd;
-
     public UserHelper(WebDriver wd) {
         super(wd);
     }
@@ -51,6 +49,7 @@ public class UserHelper extends HelperBase {
     public void isLogInFormPresent() {
         Assert.assertTrue(isElementPresent(By.cssSelector(".Login_login__right_block__1niYm")));
     }
+
     public boolean isLoginFormPresent() {
         return isElementPresent(By.cssSelector(".Login_login__right_block__1niYm"));
     }
